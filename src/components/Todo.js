@@ -20,6 +20,8 @@ const Todo = ({text, todos, setTodos, todo}) => {
         <div className='todo-div'>
             <li className={`todo-item ${todo.completed ? 'completed' :''}`}>
                 {text}
+                &emsp;
+                <small>{new Date().toLocaleDateString()}</small>
             </li>
             <button onClick={completeHandler} className="complete-btn">
                 <i className=" fas fa-check"></i>
